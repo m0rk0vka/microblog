@@ -25,4 +25,3 @@ class RegistrationForm(FlaskForm):
         email = User.query.filter_by(email=email.data).first()
         if email is not None:
             return ValidationError('Please use a different email address.')
-
